@@ -10,8 +10,11 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "html-pdf": "^3.0.1",
+    "html-to-pdfmake": "^2.4.6",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "pdfkit": "^0.13.0",
+    "pdfmake": "^0.2.5",
     "phantom": "^6.3.0",
     "phantom-html-to-pdf": "^0.7.0",
     "pug": "2.0.0-beta11"

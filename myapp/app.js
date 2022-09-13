@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var htmlPdf = require('./routes/html-pdf');
 var phantom = require('./routes/phantom');
+var pdfkit = require('./routes/pdfkit');
+var pdfmake = require('./routes/pdfmake');
 
 var app = express();
 
@@ -25,6 +27,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/html-pdf', htmlPdf);
 app.use('/phantom', phantom);
+app.use('/pdfkit', pdfkit);
+app.use('/pdfmake', pdfmake);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
