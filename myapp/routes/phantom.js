@@ -1,4 +1,8 @@
+// phantom-html-to-pdf
+// linkはダメでstyleは直接読み込みで可能
+// html上でmeta utf-8が無いと文字化けする
 // https://www.npmjs.com/package/phantom-html-to-pdf
+
 var express = require('express');
 var router = express.Router();
 var fs = require('fs')
