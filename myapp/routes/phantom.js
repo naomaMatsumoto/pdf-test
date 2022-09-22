@@ -7,7 +7,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs')
 var conversion = require("phantom-html-to-pdf")();
-var html = fs.readFileSync('./html/sample/index.html', 'utf8');
+var html = fs.readFileSync('html/sample/index.html', 'utf8');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

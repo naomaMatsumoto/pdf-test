@@ -6,7 +6,7 @@ var express = require('express');
 var router = express.Router();
 
 var fs = require('fs');
-var html = fs.readFileSync('./html/sample/index.html', 'utf8');
+var html = fs.readFileSync('html/sample/index.html', 'utf8');
 
 var pdfMake = require("pdfmake/build/pdfmake");
 var pdfFonts = require("pdfmake/build/vfs_fonts");

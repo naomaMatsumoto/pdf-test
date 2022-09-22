@@ -7,7 +7,7 @@ var router = express.Router();
 
 var fs = require('fs');
 var pdf = require('html-pdf');
-var html = fs.readFileSync('./html/sample/index.html', 'utf8');
+var html = fs.readFileSync('html/sample/index.html', 'utf8');
 var options = { format: 'Letter' };
 
 /* GET users listing. */

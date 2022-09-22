@@ -10,6 +10,7 @@ var htmlPdf = require('./routes/html-pdf');
 var phantom = require('./routes/phantom');
 var pdfkit = require('./routes/pdfkit');
 var pdfmake = require('./routes/pdfmake');
+var puppeteerPdf = require('./routes/puppeteer-pdf');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/html-pdf', htmlPdf);
 app.use('/phantom', phantom);
 app.use('/pdfkit', pdfkit);
 app.use('/pdfmake', pdfmake);
+app.use('/puppeteerPdf', puppeteerPdf);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,26 +1,237 @@
+<div class="order">
+  <ul class="order__header">
+    <li class="order__header-li">202X 年 X 月 XX 日 (ボタン押下日)</li>
+    <li class="order__header-li">（ベンダー名） 御中</li>
+    <li class="order__header-li">日本たばこ産業株式会社</li>
+    <li class="order__header-li">〒105-6927 東京都港区⻁ノ⾨4-1-1</li>
+    <li class="order__header-li">コーポレート部門 (起票者名)</li>
+  </ul>
 
-<!-- <link href="./style.css" rel="stylesheet"> -->
-<!-- <link href="C:/Users/imaji/Documents/workspace/pdf-test/myapp/sample/style.css" rel="stylesheet">  -->
+  <div class="order__title">
+    <p class="order__title-heading">発注書</p>
+    <p class="order__title-content">平素は格別のご高配を賜り御礼申し上げます。下記の通り発注いたします。</p>
+  </div>
 
+  <div class="order__content">
+    <p class="order__content-li order__content-title">契約名</p>
+    <p class="order__content-li">（契約書名）</p>
+
+    <p class="order__content-li order__content-title">業務内容・品名</p>
+    <p class="order__content-li">入力要</p>
+
+    <p class="order__content-li order__content-title">納期･支払日</p>
+    <p class="order__content-li">入力要</p>
+    <p class="order__content-li">納品月末締め､翌月末払い</p>
+  </div>
+
+  <div class="order__list">
+    <p class="order__list-title order__list-li">#</p>
+    <p class="order__list-title order__list-li">商品名</p>
+    <p class="order__list-title order__list-li">単位</p>
+    <p class="order__list-title order__list-li">数量</p>
+    <p class="order__list-title order__list-li">単価</p>
+    <p class="order__list-title order__list-li">金額</p>
+
+    <p class="order__list-li">1</p>
+    <p class="order__list-li">Xxxxxxxxxxxxxxx</p>
+    <p class="order__list-li">x</p>
+    <p class="order__list-li">x</p>
+    <p class="order__list-li">x</p>
+    <p class="order__list-li">Xxx</p>
+    <p class="order__list-li">合計金額</p>
+    <p class="order__list-li">Xxx</p>
+  </div>
+
+  <div class="order__remarks">
+    <p class="order__content-title order__remarks-li">納品条件</p>
+    <p class="order__remarks-li">入力要</p>
+    <p class="order__content-title order__remarks-li">備考</p>
+    <p class="order__remarks-li">入力要</p>
+  </div>
+
+  <div class="order__footer">
+    <div class="order__footer-title">
+      <p>担当</p>
+      <p>（問い合わせ先）</p>
+    </div>
+    <div class="order__footer-content">
+      <p>日本たばこ産業株式会社 コーポレート部門</p>
+      <p>（起票者名）</p>
+      <p>TEL: (登録番号) e-mail: (登録アドレス)@jt.co.jp</p>
+    </div>
+  </div>
+</div>
 <style>
-.red {
-    color: red;
-}
-.bold {
-    font-weight: 700;
-}
-.size32 {
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+  }
+  * {
+    box-sizing: border-box;
+    outline: none;
+  }
+  .order {
+    display: flex;
+    flex-flow: column;
+    color: #282b2c;
+    font-size: 14px;
+    padding: 32px 126px;
+  }
+  .order__header {
+    list-style-type: none;
+  }
+
+  .order__header-li {
+    padding: 8px 0px;
+    text-align: right;
+  }
+  .order__header-li:nth-child(2) {
+    padding-top: 18px;
+    text-align: left;
+  }
+  .order__title {
+    text-align: center;
+  }
+  .order__title-heading {
     font-size: 32px;
-}
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .order__title-content {
+    margin-top: 8px;
+  }
+
+  .order__content {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+  .order__content-li {
+    margin: 0;
+    padding: 12px 0px 12px 8px;
+    border: 1px solid;
+  }
+  .order__content-li:nth-child(odd) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-right: none;
+  }
+  .order__content-li:nth-child(even) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .order__content-li:nth-child(n + 3) {
+    border-top: none;
+  }
+  .order__content-li:nth-last-child(-n + 3) {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  .order__content-li:last-child {
+    background-color: #fff;
+    border-right: 1px solid;
+    border-left: none;
+  }
+
+  .order__content-title {
+    font-weight: bold;
+    background-color: #d9d9d9;
+  }
+
+  .order__list {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1.5fr 1.5fr 2fr 2fr;
+  }
+  .order__list-title {
+    font-weight: bold;
+    background-color: #d9d9d9;
+  }
+  .order__list-li {
+    margin: 0;
+    padding: 12px 0px 12px 8px;
+    border: 1px solid;
+  }
+  .order__list-li:nth-child(n + 1) {
+    border-right: none;
+  }
+  .order__list-li:nth-child(6n) {
+    border-right: 1px solid;
+  }
+  .order__list-li:nth-last-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    text-align: right;
+    border: none;
+  }
+  .order__list-li:nth-last-child(1) {
+    text-align: right;
+    border: none;
+  }
+  .order__list-li:nth-child(n + 7) {
+    border-top: none;
+  }
+
+  .order__remarks {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .order__remarks-li {
+    margin: 0;
+    padding: 12px 0px 12px 8px;
+    border: 1px solid;
+  }
+  .order__remarks-li:nth-child(odd) {
+    border-right: none;
+  }
+  .order__remarks-li:nth-child(n + 3) {
+    border-top: none;
+  }
+
+  .order__footer {
+    width: 460px;
+    height: 120px;
+    margin: 32px 0 0 auto;
+    display: flex;
+    border: 1px solid;
+    line-height: 2;
+  }
+  .order__footer-title {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    font-weight: bold;
+    background-color: #d9d9d9;
+  }
+  .order__footer-content {
+    padding-left: 12px;
+  }
+  .order__footer-content:nth-child(2) {
+    text-align: right;
+  }
 </style>
-
-<html>
-    <meta charset="UTF-8">
-
-    <body>
-        <h1>test</h1>
-        <div class="red">テスト</div>
-        <div class="bold">てすと</div>
-        <div class="size32">漢字</div>
-    </body>
-</html>

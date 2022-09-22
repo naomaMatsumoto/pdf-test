@@ -9,7 +9,7 @@ var fs = require('fs');
 const PDFDocument = require('pdfkit');
 const doc = new PDFDocument;
 
-var html = fs.readFileSync('./html/sample/index.html', 'utf8');
+var html = fs.readFileSync('html/sample/index.html', 'utf8');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
