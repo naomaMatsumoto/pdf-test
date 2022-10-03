@@ -1,6 +1,6 @@
 <div class="order">
   <ul class="order__header">
-    <li class="order__header-li">202X 年 X 月 XX 日 (ボタン押下日)</li>
+    <li class="order__header-li">{{hogehoge}}202X 年 X 月 XX 日 (ボタン押下日)</li>
     <li class="order__header-li">（ベンダー名） 御中</li>
     <li class="order__header-li">日本たばこ産業株式会社</li>
     <li class="order__header-li">〒105-6927 東京都港区⻁ノ⾨4-1-1</li>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="order__content">
-    <p class="order__content-li order__content-title">契約名</p>
+    <p class="order__content-li order__content-title" id="hoge">契約名</p>
     <p class="order__content-li">（契約書名）</p>
 
     <p class="order__content-li order__content-title">業務内容・品名</p>
@@ -32,14 +32,10 @@
     <p class="order__list-title order__list-li">単価</p>
     <p class="order__list-title order__list-li">金額</p>
 
-    <p class="order__list-li">1</p>
-    <p class="order__list-li">Xxxxxxxxxxxxxxx</p>
-    <p class="order__list-li">x</p>
-    <p class="order__list-li">x</p>
-    <p class="order__list-li">x</p>
-    <p class="order__list-li">Xxx</p>
+    {{list}}
     <p class="order__list-li">合計金額</p>
     <p class="order__list-li">Xxx</p>
+
   </div>
 
   <div class="order__remarks">
@@ -91,6 +87,10 @@
   * {
     box-sizing: border-box;
     outline: none;
+  }
+  body {
+    font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+
   }
   .order {
     display: flex;
